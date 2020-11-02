@@ -1,0 +1,161 @@
+body{
+    background-color: lightgray;
+    border: #333 3px solid;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    max-width: 1024px;
+    margin: auto;
+         
+    
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main-content"
+        "footer";
+    grid-gap: 10px;
+    box-sizing: border-box;      
+}
+
+
+.header{
+    background-color:lightblue;
+    display: inline;
+      
+}
+
+header{
+    grid-area: header;
+    display: grid;
+    grid-template-areas: "leftpage . navbar . rightpage";
+    padding: 15px;
+    grid-gap: 10px;
+   
+}
+.navbar{
+    list-style: none;
+    padding: 0;
+
+}
+.navbar li{
+    float: left;
+}
+.navbar li a{
+    display: inline;
+    text-decoration: none;
+    padding: 15px 20px;
+    
+}
+
+
+.navbar li a:hover{
+    background-color: coral;
+}
+
+.leftpage{
+    grid-area: leftpage;
+    padding: 15px;
+    text-align: start;
+
+}
+ 
+header > nav{
+    grid-area: navbar;
+    grid-column: auto;
+
+}
+
+header > nav{
+    display: grid;
+    grid-template-columns: auto;
+    
+}
+
+.rightpage{
+    grid-area: rightpage;
+    
+    padding: 15px;
+    text-align: end;
+
+}
+
+.item h1{
+    
+    text-transform: uppercase;
+  
+}
+.form{
+    border: #333 2px solid;
+}
+
+.main-content{
+    grid-area: main-content;
+
+}
+
+.main-header >div{
+    border: #333 solid;
+}
+
+.main-content{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    
+}
+
+.main-content > div{
+    background: lightgreen;
+    padding: 15px;
+    
+}
+.main-content > div:nth-child(odd){
+    background: #ddd;
+    padding: 15px;
+      
+}
+
+.bold{
+    font-weight: bold;
+    color: blue;
+}
+.aside{
+    background-color: lightgreen;
+}
+.form{
+    border: #333 1px solid;
+    padding: 15px;
+    border-radius: 8px;
+}
+.block{
+    float: left;
+    width: 50%;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.btn{
+    background-color: blue;
+    border-radius: 8px;
+    color: white;
+
+}
+.btn:hover{
+    color: tomato;
+}
+.reset{
+    background-color: blue;
+    border-radius: 8px;
+    color: white;
+
+}
+.reset:hover{
+    color: tomato;
+}
+
+.footer{
+    padding: 10px;
+    grid-area: footer;
+    text-align: center;
+    background-color: coral;
+    margin-top: 10px;
+    
+}
